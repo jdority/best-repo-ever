@@ -1,0 +1,20 @@
+<aura:component controller="pushAccountController" implements="force:lightningQuickAction,force:hasRecordId">
+    <!-- Quick Action that copies current account record to another org via an External Object / Salesforce Connect -->
+    <aura:attribute name="account" type="Account" />
+    <aura:attribute name="newAccount__x" type="Account__x"
+        default="{ 'sobjectType': 'Account__x' }" /> <!-- default to empty record -->
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <!-- Display a header with details about the account -->
+    <div class="slds-page-header" role="banner">
+        <p class="slds-text-heading--label">{!v.account.Name}</p>
+        <h1 class="slds-page-header__title slds-m-right--small
+            slds-truncate slds-align-left">Click Push to Copy this Account to Org1</h1>
+    </div>
+   
+    <lightning:button label="Cancel" onclick="{!c.handleCancel}" class="slds-m-top--medium" />
+    <lightning:button label="Push" onclick="{!c.handleSaveAccount}"
+               variant="brand" class="slds-m-top--medium"/>
+    
+</aura:component>
