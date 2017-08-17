@@ -20,7 +20,7 @@
     handleSaveAccount: function(component, event, helper) {
         if(helper.validateAccountForm(component)) {
             
-            // Prepare the action to create the new contact
+            // Prepare the action to create the new account
             var saveAccountAction = component.get("c.saveAccount");
             saveAccountAction.setParams({
                 "Account__x": component.get("v.newAccount__x"),   //case sensitive "A"
@@ -60,5 +60,4 @@
 
 	handleCancel: function(component, event, helper) {
 	    $A.get("e.force:closeQuickAction").fire();
-    }
-})
+    }})
