@@ -11,8 +11,7 @@
         "verbose": false,
         "ignoreWarnings": true
     },
-    "username": "admin@org2.demo",
-    "password": "MyTM0b1lehAjKuH8CDt1dkRWSNZHrGOkL",
+    "autoCompile": true,
     "url": "https://login.salesforce.com",
-    "autoCompile": true
+    "src": "src"
 }
