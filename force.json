@@ -13,5 +13,7 @@
     },
     "autoCompile": true,
     "url": "https://login.salesforce.com",
-    "src": "src"
+    "src": "src",
+    "username": "admin@org2.demo",
+    "password": "MyTM0b1lehAjKuH8CDt1dkRWSNZHrGOkL"
 }
