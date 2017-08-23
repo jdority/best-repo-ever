@@ -12,10 +12,12 @@
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
 
     <!-- Display a header with details about the account -->
-    <div class="slds-page-header" role="banner">
-        <p class="slds-text-heading--label">{!v.account.Name}</p>
+    <div class="slds-page-header">
+        
         <h1 class="slds-page-header__title slds-m-right--small
-            slds-truncate slds-align-left">Click Copy button to copy Account to External Org</h1>
+            slds-truncate slds-align-left">Copy Account to External Org?</h1>
+            <p ></p>
+            <p class="slds-text-heading--label">{!v.account.Name}</p>
     </div>
    
     <lightning:button label="Cancel" onclick="{!c.handleCancel}" class="slds-m-top--medium" />
