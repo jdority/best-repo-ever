@@ -1,5 +1,5 @@
 public with sharing class pushAccountControllerExt {
-
+    // intended for Salesforce Classic 
     private ApexPages.StandardController standardController;
  
     public pushAccountControllerExt(ApexPages.StandardController standardController)
@@ -9,6 +9,8 @@ public with sharing class pushAccountControllerExt {
     
     public PageReference pushAccount() {
         // can't name saveAccount__x
+        // External objects are referenced as objectName__x
+        // Must use Database method not insert
          
         Id recordId = standardController.getId();
         Account acct = [SELECT Name FROM Account WHERE Id = :recordId];
