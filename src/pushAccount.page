@@ -1,0 +1,5 @@
+<apex:page standardController="Account" extensions="pushAccountControllerExt">
+    <apex:form >
+        <apex:commandButton value="Do something" action="{!pushAccount}"/>
+    </apex:form>
+</apex:page>
