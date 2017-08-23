@@ -35,7 +35,7 @@
                     // Prepare a toast UI message
                     var resultsToast = $A.get("e.force:showToast");
                     resultsToast.setParams({
-                        "title": "Account Copied in Org1",
+                        "title": "Account Copy:",
                         "message": "Account Successfully Copied to Org1."
                     });
 
