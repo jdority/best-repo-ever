@@ -1,5 +1,5 @@
 public with sharing class pushAccountController {
-    
+    //class referenced by Lightning Component 
     @AuraEnabled
     public static Account getAccount(Id accountId) {
         return [SELECT Name FROM Account WHERE Id = :accountId];
