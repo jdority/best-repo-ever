@@ -1,6 +1,6 @@
 <aura:component controller="pushAccountController" implements="force:lightningQuickAction,force:hasRecordId">
     <!-- J. Dority -->
-    <!-- 8/17/18   -->
+    <!-- 8/23/18   -->
     <!-- pushAccount.cmp -->
     <!-- Component meant to be defined as a quick action that copies the current Account record to external object --> 
     <!-- Account__x via Salesforce Connect. -->
