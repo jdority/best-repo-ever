@@ -1,0 +1,12 @@
+<apex:page standardController="Account" extensions="pushAccountControllerExt">
+    
+    <!-- For Salesforce Classic - Visual Force Page for record copy via SF Connect -->
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockButtons location="bottom" >
+                <apex:commandLink onclick="return confirm('Are you sure you want to copy this record to Org1?');" action="{!pushAccount}" value="Copy to Org1"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+    
+</apex:page>
