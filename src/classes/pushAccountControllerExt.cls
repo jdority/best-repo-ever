@@ -1,5 +1,5 @@
 public with sharing class pushAccountControllerExt {
-    // intended for Salesforce Classic 
+    // intended for Salesforce Classic ...
     private ApexPages.StandardController standardController;
  
     public pushAccountControllerExt(ApexPages.StandardController standardController)
@@ -18,7 +18,12 @@ public with sharing class pushAccountControllerExt {
         ax.Name__c = acct.Name;
         Database.SaveResult sr = Database.insertAsync(ax);
 
-        return null;
+   if (!sr.isSuccess()) {
+        
+      ApexPages.addmessage(new ApexPages.message(ApexPages.severity.CONFIRM,''));
+        
     }
-
+    
+    return null;
+}
 }
