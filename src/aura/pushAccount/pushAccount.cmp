@@ -2,7 +2,7 @@
     <!-- J. Dority -->
     <!-- 8/23/18   -->
     <!-- pushAccount.cmp -->
-    <!-- Component meant to be defined as a quick action that copies the current Account record to external object --> 
+    <!-- Componen to be defined as a quick action that copies the current Account record to external object --> 
     <!-- Account__x via Salesforce Connect. -->
  
     <aura:attribute name="account" type="Account" />
