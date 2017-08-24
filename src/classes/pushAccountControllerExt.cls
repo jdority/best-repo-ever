@@ -24,7 +24,7 @@ public with sharing class pushAccountControllerExt {
         Database.SaveResult sr = Database.insertAsync(ax);
         //  SaveResult.isSuccess is set to false regardless because external objects are background jobs
         //  backgroundoperation sObject allows for monitoring of insertAsync background job
-        //  *** Additonal Error Handling would go here
+        //  *** Additonal Error Handling would go here **
         
         ApexPages.addmessage(new ApexPages.message(ApexPages.severity.CONFIRM,'Account Successfully Copied'));
         return null;
