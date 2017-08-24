@@ -1,29 +1,33 @@
 public with sharing class pushAccountControllerExt {
-    // intended for Salesforce Classic ...
+    // Salesforce Classic.
     private ApexPages.StandardController standardController;
- 
+    
     public pushAccountControllerExt(ApexPages.StandardController standardController)
     {
         this.standardController = standardController;
     }
+    public Boolean spehereEnabled = false;    
     
+    public void enableSpehere()
+    {
+        spehereEnabled = true;
+    }
     public PageReference pushAccount() {
         // can't name saveAccount__x
         // External objects are referenced as objectName__x
         // Must use Database method not insert
-         
+        
         Id recordId = standardController.getId();
         Account acct = [SELECT Name FROM Account WHERE Id = :recordId];
         Account__x ax = new Account__x(); 
         ax.Name__c = acct.Name;
         Database.SaveResult sr = Database.insertAsync(ax);
-
-   if (!sr.isSuccess()) {
+        //  SaveResult.isSuccess is set to false regardless because external objects are background jobs
+        //  backgroundoperation sObject allows for monitoring of insertAsync background job
+        //  *** Additonal Error Handling would go here
         
-      ApexPages.addmessage(new ApexPages.message(ApexPages.severity.CONFIRM,''));
-        
+        ApexPages.addmessage(new ApexPages.message(ApexPages.severity.CONFIRM,'Account Successfully Copied'));
+        return null;
     }
     
-    return null;
-}
 }
