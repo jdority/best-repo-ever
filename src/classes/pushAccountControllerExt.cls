@@ -6,12 +6,7 @@ public with sharing class pushAccountControllerExt {
     {
         this.standardController = standardController;
     }
-    public Boolean spehereEnabled = false;    
     
-    public void enableSpehere()
-    {
-        spehereEnabled = true;
-    }
     public PageReference pushAccount() {
         // can't name saveAccount__x
         // External objects are referenced as objectName__x
