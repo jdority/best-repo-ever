@@ -1,6 +1,8 @@
 public class pushAccountPB {
-
-    // invocable method that can be executed by Process Builer
+    // Example Invocable method that can be executed by Process Builer to insert into external object
+    // 1) In Process Builder, create an "Apex Action".
+    // 2) Under "Apex Class", select/enter this class
+    // 3) Under "Set Apex Variables", select the parameter name ids as the "Field", Reference as the "Type", and  "Account_Id" as the Value. 
     @InvocableMethod(label='Copy2ExternalOrg' description='Copies newly created record to Org1')
     public static void inactivatePortalUsers(List<Id> ids) {
         callFuture(ids);
